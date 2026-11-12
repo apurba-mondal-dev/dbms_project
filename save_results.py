@@ -22,9 +22,9 @@ def save_duplicates():
             VALUES (:1, :2, :3, :4, 'PENDING')
         """, (
             index,
-            item["ID 1"],
-            item["ID 2"],
-            item["Similarity"]
+            int(item["ID 1"]),
+            int(item["ID 2"]),
+            float(item["Similarity"])
         ))
 
     conn.commit()
